@@ -33,7 +33,9 @@
 :root {
     --color-primary-dark: #31261A;
     --color-primary-light: #FAF4EA;
-    --color-brand-light: #819B57;
+    --color-secondary-dark: #A18268;
+    --color-brand-light: #CFCFBC;
+    --color-brand-normal: #819B57;
     --color-brand-dark: #465929;
 }
 
@@ -44,6 +46,7 @@
 
 body {
     color: var(--color-primary-dark);
+    background-color: var(--color-primary-light);
     font-family: 'Poppins', sans-serif;
     font-size: 18px; 
     font-weight: 400;
@@ -87,8 +90,8 @@ h1, h2, h3, h4, h5, h6, p {
 /* BUTTON */
 .button {
     color: var(--color-primary-light);
-    background-color: var(--color-brand-light);
-    border: 2px solid var(--color-brand-light);
+    background-color: var(--color-brand-normal);
+    border: 2px solid var(--color-brand-normal);
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
@@ -107,7 +110,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .link:hover {
-    color: var(--color-brand-light);
+    color: var(--color-brand-normal);
     font-weight: 600;
 }
 
@@ -139,6 +142,10 @@ h1, h2, h3, h4, h5, h6, p {
 /* HERO SECTION */
 .hero-section {
     padding: 272px 0;
+    background-image: url('../img/couple-in-backery.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
 }
 
 .hero-title {
@@ -150,13 +157,13 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .hero-title .accent {
-    color: var(--color-brand-light);
+    color: var(--color-brand-normal);
 }
 
 /* ADVANTAGES SECTION */
 .advantages-section {
     padding: 16px 0;
-    background-color: var(--color-brand-light);
+    background-color: var(--color-brand-normal);
 }
 
 .advantages-list { 
@@ -181,6 +188,10 @@ h1, h2, h3, h4, h5, h6, p {
     color: var(--color-brand-dark);
 }
 
+.section-title.centered {
+    text-align: center;
+}
+
 
 /* TRADITION SECTION */
 .traditions-section {
@@ -202,7 +213,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .traditions-text .brand {
-    color: var(--color-brand-light);
+    color: var(--color-brand-normal);
     font-weight: 600;
 }
 
@@ -216,13 +227,27 @@ h1, h2, h3, h4, h5, h6, p {
 
 /* CHEFS SECTION */
 .chefs-title {
-    margin-bottom: 80px;
+    max-width: 520px;
+    margin: 0 auto 80px;
+}
+
+.chefs-title::before,
+.chefs-title::after {
+    display: block;
+    width: 352px;
+    border: 2px solid var(--color-brand-light);
+    content: '';
 }
 
 .chef-title {
     margin-bottom: 16px;
     font-size: 40px;
     font-weight: 600;
+}
+
+.chef-photo {
+    border-radius: 4px 4px 4px 200px;
+    box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
 }
 
 /* FORMATS SECTION */
@@ -238,6 +263,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .format-card {
     padding: 24px;
+    background-image: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, rgba(49, 38, 26, 1) 100%);
     border: 1px solid lightgray; /* remove */
     border-radius: 16px;
 }
@@ -270,11 +296,19 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .address-link:hover {
-    color: var(--color-brand-light);
+    color: var(--color-brand-normal);
     font-size: 16px;
     font-weight: 300;
 }
 
 .address-copyright {
     font-size: 14px;
+}
+
+.footer {
+    background-image: url('../img/footer-background.png');
+    background-color: var(--color-primary-dark);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
