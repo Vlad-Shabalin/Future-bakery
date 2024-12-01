@@ -113,6 +113,7 @@ a {
 .link {
     color: var(--color-primary-light);
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 .link:hover {
@@ -122,7 +123,12 @@ a {
 
 /* HEADER */
 .header {
-    background-color: lightgray;
+    /* background-color: lightgray; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 32px;
 }
 
 .header-container {
@@ -148,7 +154,7 @@ a {
 /* HERO SECTION */
 .hero-section {
     padding: 272px 0;
-    background-image: url('../img/couple-in-backery.jpg');
+    background-image: linear-gradient(102.76deg, rgba(18, 18, 17, 0.78) 2.03%, rgba(18, 18, 17, 0.6) 58.46%, rgba(18, 18, 17, 0) 90.36%), url('../img/couple-in-backery.jpg');
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -310,6 +316,11 @@ a {
     border: 1px solid lightgray; /* remove */
     border-radius: 16px;
     height: 444px;
+    transition: transform 0.3s;
+}
+
+.format-card:hover {
+    transform: scale(1.05);
 }
 
 .formats-title {
@@ -323,7 +334,7 @@ a {
 
 .format-text {
     font-size: 14px;
-    font-weight: 900;
+    font-weight: 300;
 }
 
 /* CAROUSEL */
@@ -345,6 +356,10 @@ a {
 .carousel-button:hover {
     background-color: var(--color-primary-dark);
     fill: var(--color-primary-light);
+}
+
+.carousel-button.next {
+    transform: rotate(180deg);
 }
 
 /* CONTACTS SECTION */
@@ -458,20 +473,24 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.modal {
-    position: relative;
-    width: 880px;
-    height: 880px;
-    background-color: var(--color-primary-light);
-    border-radius: 32px;
+    padding: 20px 0;
+    transition: opacity 0.3s, visibility 0.3s;
 }
 
 .backdrop.is-hidden {
     opacity: 0;
     visibility: hidden;
-    pointer-events:none;
+    pointer-events: none;
+}
+
+.modal {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 880px;
+    max-height: 880px;
+    background-color: var(--color-primary-light);
+    border-radius: 32px;
 }
 
 .modal-btn-close {
