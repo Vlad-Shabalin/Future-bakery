@@ -1,3 +1,5 @@
+@import '/scss/components/format-card';
+
 .formats-container {
     display: flex;
     gap: 32px;
@@ -12,22 +14,6 @@
 
 .formats-item {
     flex-basis: calc((100% - 40px) / 3);
-}
-
-.format-card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 24px;
-    background-image: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, rgba(49, 38, 26, 1) 100%);
-    border-radius: 16px;
-    height: 444px;
-    transition: transform 0.3s;
-}
-
-.format-card:hover {
-    transform: scale(1.05);
 }
 
 .format-image {
@@ -46,11 +32,9 @@
 .format-title {
     font-size: 24px;
     font-weight: 600;
-    color: var(--color-primary-light);
 }
 
 .format-text {
     font-size: 14px;
     font-weight: 300;
-    color: var(--color-primary-light);
 }
